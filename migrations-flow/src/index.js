@@ -49,7 +49,7 @@ function dataToGraph(data) {
 // const sankey = d3.sankey()
 
 function drawSankey(graph) {
-  var units = "Widgets";
+  var units = "Subscribers";
 
   var margin = {top: 10, right: 10, bottom: 10, left: 10},
       width = 700 - margin.left - margin.right,
