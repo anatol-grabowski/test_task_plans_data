@@ -1,5 +1,6 @@
 const fs = require('fs')
 const path = require('path')
+const webpack = require('webpack')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 
 const appDirectory = fs.realpathSync(process.cwd())
@@ -21,6 +22,9 @@ const config = {
     minimize: false,
   },
   plugins: [
+    new webpack.DefinePlugin({
+      'DATA_PATH': JSON.stringify('/'),
+    }),
     new HtmlWebpackPlugin({
       template: resolveApp('public/index.html'),
       filename: resolveApp('dist/index.html'),
