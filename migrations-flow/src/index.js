@@ -8,8 +8,8 @@ function dataToGraph(data) {
   const rows = Object.keys(data[Object.keys(data)[0]])
   const links = []
   const nodes = cols
-    .map(col => 'new ' + col)
-    .concat(rows.map(row => row === '-1' ? 'no plan' : 'old ' + row))
+    .map(col => col)
+    .concat(rows.map(row => row))
     .map((name, i) => ({node: i, name}))
   cols.forEach((col, i) => {
     rows.forEach((row, j) => {
@@ -53,7 +53,7 @@ function drawSankey(graph) {
 
   var margin = {top: 10, right: 10, bottom: 10, left: 10},
       width = 700 - margin.left - margin.right,
-      height = 300 - margin.top - margin.bottom;
+      height = 700 - margin.top - margin.bottom;
   window.width = width
 
 
