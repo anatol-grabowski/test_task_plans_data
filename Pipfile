@@ -16,6 +16,9 @@ xlrd = "*"
 matplotlib = "*"
 numba = "*"
 seaborn = "*"
+scikit-learn = "*"
+sklearn-pandas = "*"
+pydotplus = "*"
 
 [dev-packages]
 
