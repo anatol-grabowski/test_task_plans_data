@@ -19,6 +19,7 @@ seaborn = "*"
 scikit-learn = "*"
 sklearn-pandas = "*"
 pydotplus = "*"
+xlsxwriter = "*"
 
 [dev-packages]
 
